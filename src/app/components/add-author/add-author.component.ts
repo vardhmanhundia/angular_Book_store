@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-add-author',
@@ -16,11 +21,12 @@ export class AddAuthorComponent implements OnInit {
       password: [null, [Validators.required]],
       remember: [true],
     });
+  }
 
-    // submitForm(): void {
-    //   for (const i in this.validateForm.controls) {
-    //     this.validateForm.controls[i].markAsDirty();
-    //     this.validateForm.controls[i].updateValueAndValidity();
-    //   }
+  submitForm(): void {
+    // for (const i in this.validateForm.controls) {
+    //   this.validateForm.controls[i].markAsDirty();
+    //   this.validateForm.controls[i].updateValueAndValidity();
+    // }
   }
 }

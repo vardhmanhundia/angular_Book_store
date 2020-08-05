@@ -1,0 +1,31 @@
+<div>
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your authorName!">
+        <input formControlName="name" nz-input placeholder="Author Name" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your birthYear">
+        <input formControlName="birthYear" nz-input placeholder="Birth Year" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Nationality!">
+        <input
+          formControlName="Nationality"
+          nz-input
+          placeholder="Nationality"
+        />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary">
+          Log in
+        </button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>

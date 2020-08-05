@@ -1,1 +1,63 @@
-<p>input-book works!</p>
+<div>
+  <form formGroup="bookForm" nz-form (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Book Title!">
+        <input formControlName="title" nz-input placeholder="Book Title" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your publicationYear">
+        <input
+          formControlName="publicationYear"
+          nz-input
+          placeholder="Publication Year"
+        />
+      </nz-form-control>
+      <div>
+        <nz-form-control nzErrorTip="Please select the author names">
+          <nz-select
+            nzMode="tags"
+            nzPlaceHolder="Tag Mode"
+            [(ngModel)]="listOfTagOptions"
+            [ngModelOptions]="{ standalone: true }"
+          >
+            <nz-option
+              *ngFor="let option of listOfOption"
+              [nzLabel]="option.label"
+              [nzValue]="option.value"
+            ></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </div>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Language!">
+        <input formControlName="language" nz-input placeholder="Language" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Subject!">
+        <input formControlName="subject" nz-input placeholder="Subject" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary">
+          Add Book
+        </button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+  <nz-select
+    nzMode="tags"
+    nzPlaceHolder="Tag Mode"
+    [(ngModel)]="listOfTagOptions"
+  >
+    <nz-option
+      *ngFor="let option of listOfOption"
+      [nzLabel]="option.label"
+      [nzValue]="option.value"
+    ></nz-option>
+  </nz-select>
+</div>

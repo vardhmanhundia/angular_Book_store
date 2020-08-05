@@ -8,7 +8,7 @@ export class ConfigService {
   constructor(private http: HttpClient) {}
 
   url = 'http://localhost:4000';
-  getCharacters() {
+  getCharacters(): any {
     return this.http.get(`${this.url}/characters`);
   }
 }

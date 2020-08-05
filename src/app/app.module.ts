@@ -13,7 +13,7 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
@@ -25,7 +25,7 @@ import { InputBookComponent } from './components/input-book/input-book.component
 import { AddAuthorComponent } from './components/add-author/add-author.component';
 import { AuthorDetailviewComponent } from './components/author-detailview/author-detailview.component';
 import { BookDetailviewComponent } from './components/book-detailview/book-detailview.component';
-
+import { NzSelectModule } from 'ng-zorro-antd/select';
 registerLocaleData(en);
 
 @NgModule({
@@ -53,6 +53,8 @@ registerLocaleData(en);
     NzGridModule,
     NzAvatarModule,
     NzFormModule,
+    ReactiveFormsModule,
+    NzSelectModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
