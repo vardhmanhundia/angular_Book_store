@@ -1,0 +1,22 @@
+<nz-card
+  style="width: 300px;"
+  [nzCover]="coverTemplate"
+  [nzActions]="[actionSetting, actionEdit, actionEllipsis]"
+>
+  <nz-card-meta nzTitle="Author Name" nzDescription="Birth Year"></nz-card-meta>
+</nz-card>
+<ng-template #coverTemplate>
+  <img
+    alt="example"
+    src="https://cdn.britannica.com/49/134949-050-242B08C7/Rabindranath-Tagore.jpg"
+  />
+</ng-template>
+<ng-template #actionSetting>
+  <i nz-icon nzType="caret-down" [nzTheme]="'fill'"></i>
+</ng-template>
+<ng-template #actionEdit>
+  <i nz-icon nzType="edit"></i>
+</ng-template>
+<ng-template #actionEllipsis>
+  <i nz-icon nzType="delete" [nzTheme]="'fill'"> </i>
+</ng-template>
